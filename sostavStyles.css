@@ -1,0 +1,184 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+  min-height: 120vh;
+  background-image: linear-gradient(to top, #0c0c0c 26%, transparent),
+    url('images/les.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Russo One';
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body::before {
+  position: absolute;
+  width: min(1400px, 90vw);
+  top: 10%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  content: '';
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  pointer-events: none;
+}
+.logoTextLeft{
+  margin-left: 0.5em;
+  letter-spacing: 0.1em;
+  background-image: linear-gradient(to right, #090B0F, #7545F4);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.logoTextRight{
+  margin-right: 0.5em;;
+  letter-spacing: 0.1em;
+  background-image: linear-gradient(to left, #090B0F, #7545F4);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.logo {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 100;
+  text-decoration: none;
+  margin-left: 40px;
+  text-shadow: #090B0F 4px 4px 8px;
+}
+
+.navbar .menuClassLeft::before {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #7545F4;
+  transition: 0.5s;
+}
+.navbar .menuClassRight::before {
+  content: '';
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #7545F4;
+  transition: 0.5s;
+}
+.navbar a:hover::before {
+  width: 100%;
+}
+
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.team {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  top: 14.3vh;
+}
+.teamText {
+  font-family: 'Russo One';
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 4em;
+  text-decoration: none;  
+  text-shadow: #7545F4 3px 6px 20px;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.container{
+  
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  }
+  .container .slider {
+    margin-top: 27em;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: -15em;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 60s linear infinite;
+    z-index: 2;
+  }
+
+  @keyframes autoRun {
+    from {
+      transform: perspective(1000px) rotateX(-12deg) rotateY(0deg);
+    }
+    to {
+      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+  }
+
+  .container .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(550px);
+  }
+  .banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sostavTextStyle{
+    font-family: 'Russo One';
+    color: #fff;
+    font-weight: 300;
+    text-shadow: #eb2647 2px 2px 5px;
+  }
